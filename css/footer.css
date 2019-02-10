@@ -30,6 +30,9 @@ footer {
 }
 
 #add-entry-button {
+  position: grid;
+  align-content: center;
+  justify-content: center;
   align-self: flex-end;
   border-radius: 50%;
   font-size: 40px;
@@ -38,14 +41,4 @@ footer {
   position: relative;
   width: 70px;
   z-index: 1;
-}
-
-#check-list-entries {
-  display: flex;
-  flex-direction: column;
-  justify-self: flex-start;
-}
-
-#list-of-tasks {
-  justify-self: flex-start;
 }
