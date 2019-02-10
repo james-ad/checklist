@@ -1,0 +1,112 @@
+@import "./colors.scss";
+@import "./nav.css";
+@import "./footer.css";
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to top left,
+    rgb(171, 181, 194),
+    rgb(129, 190, 247)
+  );
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 95%;
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.delete-button {
+  border-radius: 5px;
+  height: 25px;
+  font-size: 1em;
+}
+
+.highlighted {
+  background: linear-gradient(
+    rgba(20, 125, 230, 0.747),
+    rgba(8, 78, 148, 0.747)
+  );
+  color: rgba(250, 250, 250, 0.75);
+}
+
+.list-item {
+  align-items: center;
+  background: rgb(250, 250, 250);
+  width: 98%;
+  height: 20px;
+  min-height: 20px;
+  padding: 10px;
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+}
+
+.list-of-tasks {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-height: 525px;
+  min-height: 250px;
+  max-width: 125px;
+  min-width: 95%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 5px;
+  position: absolute;
+  right: -20px;
+  top: -13px;
+  /* Push the scroll bar to the right to remove it from sight */
+  padding-right: 20px;
+}
+
+#app {
+  background: linear-gradient(to top, rgb(220, 226, 233), rgb(83, 103, 139));
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: 0px 2px 20px rgba(23, 26, 29, 0.747);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 667px;
+  min-height: 667px;
+  max-width: 375px;
+  min-width: 375px;
+  overflow: hidden;
+}
+
+#check-list-entries {
+  bottom: 230px;
+  max-height: 500px;
+  position: relative;
+  width: 100%;
+}
+
+#text-box {
+  max-height: 250px;
+  min-height: 250px;
+  max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 2px;
+}

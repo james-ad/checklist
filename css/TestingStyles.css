@@ -1,0 +1,93 @@
+@import "./colors.scss";
+/* @import "./nav.css";
+@import "./footer.css"; */
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  /* background: linear-gradient(
+    to top left,
+    rgb(171, 181, 194),
+    rgb(129, 190, 247)
+  ); */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+.check-list-entries {
+  display: grid;
+  grid-template-rows: minmax(1fr, 600px);
+
+  background: yellow;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+
+.delete-button {
+  border-radius: 5px;
+  height: 25px;
+  font-size: 1em;
+}
+
+.list-item {
+  align-items: center;
+  background: rgb(250, 250, 250);
+  height: 20px;
+  min-height: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+}
+
+.list-of-tasks {
+  display: grid;
+  background: blue;
+  grid-template-rows: minmax(20px, 450px);
+}
+
+#task-list {
+  /* background: yellow; */
+}
+
+#app {
+  border: 1px solid black;
+  border-radius: 25px;
+  min-width: 375px;
+  max-width: 375px;
+  min-height: 667px;
+  max-height: 667px;
+  background: linear-gradient(to top, rgb(220, 226, 233), rgb(83, 103, 139));
+  display: grid;
+  grid-template-rows: 1.5fr 7fr 1.5fr;
+  grid-template-areas:
+    "header"
+    "check-list"
+    "footer";
+  overflow: hidden;
+}
+
+#text-box {
+  max-height: 250px;
+  min-height: 250px;
+  max-width: 100%;
+  min-width: 100%;
+}

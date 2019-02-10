@@ -1,0 +1,51 @@
+button {
+  border: 1.5px solid rgba(42, 51, 59, 0.5);
+  box-shadow: 0px 2px 7px 0px #6983;
+}
+
+button:hover {
+  box-shadow: 0px 0px 7px 2.5px rgba(17, 22, 39, 0.2);
+  transition: ease-in 0.2s;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 125px;
+}
+
+.save-entry-button {
+  align-self: center;
+  border-radius: 20px;
+  max-width: 150px;
+  min-width: 100px;
+  max-height: 35px;
+  min-height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+.visible {
+  opacity: 1;
+}
+
+#add-entry-button {
+  align-self: flex-end;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 70px;
+  margin: 20px;
+  position: relative;
+  width: 70px;
+  z-index: 1;
+}
+
+#check-list-entries {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+}
+
+#list-of-tasks {
+  justify-self: flex-start;
+}

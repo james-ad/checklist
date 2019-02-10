@@ -1,0 +1,59 @@
+@import "./colors.scss";
+:root {
+  --nav-light-blue: rgb(76, 145, 195);
+  --nav-dark-blue: rgb(41, 97, 144);
+}
+
+#menu-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  /* border: solid black 1px; */
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.nav-bar {
+  width: 45px;
+  height: 7px;
+  margin: 5px;
+  background: black;
+  transition: 0.4s;
+}
+
+.nav-menu {
+  background: linear-gradient(var(--nav-light-blue), var(--nav-dark-blue));
+  height: 100px;
+  max-width: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32px;
+  padding-left: 20px;
+}
+
+.change {
+  position: absolute;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#header-text {
+  display: inline-block;
+}
