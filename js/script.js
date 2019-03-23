@@ -4,9 +4,22 @@ const appData = {
 
 const state = {};
 
-function animateMenu(e) {
-  e.classList.toggle("change");
-  alert(e);
+function animateMenu() {
+  const menu = document.getElementsByClassName("nav-bar");
+  return (
+    Array.from(menu).forEach(item => {
+      console.log(item);
+      item.classList.toggle("change");
+      // See if container or individual bars need to have class name changed
+    }),
+    dropMenu()
+  );
+}
+
+function dropMenu() {
+  const menu = document.getElementById("drop-down-menu");
+  console.log(menu);
+  menu.classList.toggle("active-menu");
 }
 
 function highlightForDeletion(e) {
@@ -85,7 +98,6 @@ function removeListItem(e) {
   }
   // Filter through state object for the key that matches the id of the list item that is to be removed
   // Once a match is found, remove that key/value pair from the state object
-  console.log(Object.keys(state));
   Object.keys(state).filter(key => {
     if (key === e.target.parentNode.id) delete state[key];
     console.log(state);
@@ -116,6 +128,10 @@ function submitEntry() {
 document
   .getElementById("menu-icon-container")
   .addEventListener("click", animateMenu);
+
+// document
+//   .getElementById("menu-icon-container")
+//   .addEventListener("click", dropMenu);
 
 document
   .getElementById("save-entry-button")
